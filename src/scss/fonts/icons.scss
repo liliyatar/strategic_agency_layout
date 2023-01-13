@@ -14,3 +14,22 @@
 		display: block;
 	}
 }
+
+._icon-quote:before {
+  content: "\e901";
+}
+._icon-big-arrow:before {
+  content: "\e900";
+}
+._icon-small-arrow:before {
+  content: "\e902";
+}
+._icon-s-instagram:before {
+  content: "\e903";
+}
+._icon-s-twitter:before {
+  content: "\e904";
+}
+._icon-s-facebook:before {
+  content: "\e905";
+}

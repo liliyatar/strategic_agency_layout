@@ -1,3 +1,217 @@
 //====================================================================================================
+.footer {
+	background: rgb(198,248,255);
+	background: linear-gradient(90deg, rgb(141, 242, 255) 0%, rgb(0, 94, 172) 100%);
+	// border-radius: 2% 2% 0% 0%;
+	border-radius: 20px 20px 0px 0px / 30px 30px 0px 0px;
 
+	// .footer__container
+	&__container {
+		@include adaptiveValue("padding-top", 100, 40);
+		padding-bottom: rem(80);
+		// display: flex;
+		// gap: rem(226);
+	}
+	// .footer__contacts
+	&__contacts {
+		display: flex;
+		@include adaptiveValue("gap", 226, 50);
+		@media (max-width:$mobile) {
+			flex-direction: column;
+		}
+	}
+	// .footer__navigation
+	&__navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		row-gap: rem(20);
+		@media (max-width: 525px) {
+			align-items: flex-start;
+		}
+		@media (max-width: $mobile){
+			flex-direction: column;
+			// align-items: flex-start;
+		}
+		@include adaptiveValue("padding-top", 100, 50);
+	}
+	// .footer__logo
+	&__logo {
+	}
+	// .footer__menu
+	&__menu {
+	}
+}
+
+.contacts {
+	// .contacts__content
+	&__content {
+	}
+	// .contacts__title
+	&__title {
+		font-family: "Poppins";
+		font-weight: 600;
+		font-size: rem(32);
+		line-height: math.div(48, 32);
+		color: #fff;
+		&:not(:last-child) {
+			margin-bottom: rem(56);
+		}
+	}
+	// .contacts__form
+	&__form {
+	}
+	// .contacts__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@media (max-width:$mobile){
+			gap: rem(20);
+		}
+	}
+	// .contacts__item
+	&__item {
+	}
+	// .contacts__social
+	&__social {
+		display: flex;
+		gap: rem(40);
+	}
+}
+
+.form {
+	display: grid;
+	gap: rem(16);
+	// .form__item
+	&__item {
+	}
+	&__item {
+		&:last-child {
+			padding-top: rem(50);
+		}
+	}
+	// .form__input
+	&__input {
+		font-family: "Poppins";
+		font-weight: 600;
+		font-size: rem(15);
+		line-height: math.div(22, 15);
+		width: 100%;
+		height: rem(48);
+		color: #fff;
+		background-color: transparent;
+		border-bottom: 2px solid #fff;
+		padding: rem(0) rem(24);
+	}
+
+	&__input::placeholder {
+		color: #fff;
+	}
+
+	&__input:focus::placeholder {
+		color: #fff;
+	}
+
+	// .form__button
+	&__button {
+		width: 100%;
+	}
+
+	&__error {
+		padding: rem(5) rem(24) rem(0) rem(24);
+		color: red;
+		font-size: rem(12);
+	}
+}
+
+textarea.form__input {
+	height: rem(190);
+	resize: vertical;
+	padding: rem(24);
+}
+
+.item-contact {
+	// .item-contact__title
+	&__title {
+		font-family: "Poppins";
+		font-weight: 700;
+		font-size: rem(14);
+		color: #fff;
+		letter-spacing: rem(3);
+		text-transform: uppercase;
+		line-height: math.div(20, 13);
+		opacity: 0.8;
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
+	// .item-contact__text
+	&__text {
+		font-weight: 600;
+		font-size: rem(24);
+		line-height: math.div(36, 24);
+		color: #fff;
+		transition: all 0.8s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #ff9c8e;
+			}
+		}
+	}
+}
+
+
+.social {
+	// .social__item
+	&__item {
+		color: #fff;
+
+	}
+	// .social__link
+	&__link {
+		display: block;
+		transition: all 0.8s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #ff9c8e;
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+
+.menu-footer {
+	// .menu-footer__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: rem(10);
+		color: #fff;
+		align-items: center;
+		@include adaptiveValue("column-gap", 56, 25, 0, 1200, 768);
+		@media (max-width: 525px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	// .menu-footer__item
+	&__item {
+	}
+	// .menu-footer__link
+	&__link {
+		font-family: "Poppins";
+		font-weight: 700;
+		font-size: rem(13);
+		line-height: math.div(20, 13);
+		letter-spacing: rem(3);
+		text-transform: uppercase;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #ff9c8e;
+			}
+		}
+	}
+}
 //====================================================================================================
